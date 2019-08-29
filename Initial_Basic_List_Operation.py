@@ -39,3 +39,4 @@ list3 = ["a", "b", "c", "d"]
 
 #if filter(i)
 #Apply a filter with an If-statement.
+#*************************************************************
