@@ -61,3 +61,14 @@ Let’s see how this works.
 3. Finally, it stores these elements in a list, and prints it out.
 Remember, this is a nested conditional, not an AND operation of two conditions.
 #*************************************************************
+list1=[1,2,3,4]
+#print([i for i in list1 if i%2==0] )
+
+non_flat = [ [1,2,3], [4,5,6], [7,8] ]
+print([x for x in non_flat])
+
+print([y for x in non_flat for y in x])
+
+print([y for x in non_flat for y in x if y%2==0] )
+
+#*************************************************************
