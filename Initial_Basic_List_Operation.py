@@ -24,7 +24,7 @@ list3 = ["a", "b", "c", "d"]
 
 #List comprehension view .IS EQUIVALENT TO.
 #new_list = [expression(i) for i in old_list if filter(i)]
-
+# [<the_expression> for <the_element> in <the_iterable> if <the_condition>]
 #*************************************************************
 #Breaking of the statement.How it works  
 # new_list = [expression(i) for i in old_list if filter(i)]
@@ -39,4 +39,14 @@ list3 = ["a", "b", "c", "d"]
 
 #if filter(i)
 #Apply a filter with an If-statement.
+
 #*************************************************************
+(values) = [ (expression) for (item) in (collection) ]
+The above list comprehension is equivalent to the following plain for-loop:
+
+(values) = []
+for (item) in (collection):
+    (values).append( (expression) )
+#*************************************************************
+    
+ 
