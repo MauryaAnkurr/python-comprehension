@@ -49,4 +49,15 @@ for (item) in (collection):
     (values).append( (expression) )
 #*************************************************************
     
- 
+#Nested Conditionals
+With a Python list comprehension, it doesn’t have to be a single condition; you can nest conditions. 
+Here’s an example.
+
+[i for i in range(8) if i%2==0 if i%3==0]
+[0, 6]
+Let’s see how this works. 
+1. For integers 0 to 7, it first filters out the elements that aren’t perfectly divisible by 
+2. For the remaining elements, it keeps only those that are divisible by 
+3. Finally, it stores these elements in a list, and prints it out.
+Remember, this is a nested conditional, not an AND operation of two conditions.
+#*************************************************************
