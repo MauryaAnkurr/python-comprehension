@@ -1,0 +1,67 @@
+When iterated over, the above generator expression yields the same sequence of values as the bounded_repeater generator function 
+we implemented generators tutorial as :
+
+def bounded_repeater(value, max_repeats):
+    for i in range(max_repeats):
+        yield value
+
+iterator = bounded_repeater('Hello', 3)
+for x in iterator:
+ print(x)
+'Hello'
+'Hello'
+'Hello'
+_____________________________________________________________________________________
+But there is better way of doing the samething: We will have same output a above.
+
+iter = ('Hello' for i in range(3))
+__________________________________
+
+for x in iterator:
+ print(x)
+'Hello'
+'Hello'
+'Hello'
+
+One small concern:
+
+Once a generator expression has been consumed, it can’t be restarted or reused.
+So in some cases there is an advantage to using generator functions or class-based iterators.
+
+________________________________________________________________________________________
+Generator Expressions with conditions:
+genexpr = (expression for item in collection
+           if condition)
+ ________________________________________________________________________________________
+ 
+Generator Expressions in Python – Summary
+Generator expressions are similar to list comprehensions. However, they don’t construct list objects. 
+Instead, generator expressions generate values “just in time” like a class-based iterator or generator function would.
+Once a generator expression has been consumed, it can’t be restarted or reused.
+
+
+____________________________________________________________________________________________
+Generator expressions are best for implementing simple “ad hoc” iterators. 
+For complex iterators, it’s better to write a generator function or a class-based iterator.
+
+____________________________________________________________________________________________
+
+Too Much of a Good Thing…
+Like list comprehensions, generator expressions allow for more complexity than what we’ve covered so far. Through nested for-loops and chained filtering clauses, they can cover a wider range of use cases:
+
+(expr for x in xs if cond1
+      for y in ys if cond2
+      ...
+      for z in zs if condN)
+The above pattern translates to the following generator function logic:
+
+for x in xs:
+    if cond1:
+       for y in ys:
+            if cond2:
+                ...
+                    for z in zs:
+                        if condN:
+                             yield expr
+                           
+ ______________________________________________________________________________________________________
