@@ -12,6 +12,9 @@ thistuple = ("apple", "banana", "cherry")
 if "apple" in thistuple:
   print("Yes, 'apple' is in the fruits tuple")
 __________________________________________________________
+Creating a tuple with one element is a bit tricky.
+Having one element within parentheses is not enough. We will need a trailing comma to indicate that it is, in fact, a tuple.
+
 thistuple = ("apple",)
 print(type(thistuple))
 
@@ -34,4 +37,14 @@ a, b, c = my_tuple
 print(a)      # 3
 print(b)      # 4.6 
 print(c)      # dog 
-_____________________________________________________________________________________
+______________________________________________________________________________________________
+Advantages of Tuple over List
+Since tuples are quite similar to lists, both of them are used in similar situations as well.
+
+However, there are certain advantages of implementing a tuple over a list. Below listed are some of the main advantages:
+
+We generally use tuple for heterogeneous (different) datatypes and list for homogeneous (similar) datatypes.
+Since tuples are immutable, iterating through tuple is faster than with list. So there is a slight performance boost.
+Tuples that contain immutable elements can be used as a key for a dictionary. With lists, this is not possible.
+If you have data that doesn't change, implementing it as tuple will guarantee that it remains write-protected.
+_________________________________________________________________________________________________
