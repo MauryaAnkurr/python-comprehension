@@ -1,1 +1,37 @@
 A tuple is a collection which is ordered and unchangeable. In Python tuples are written with round brackets.
+________________________________________________________________________________________________________________________
+Change Tuple Values-
+Once a tuple is created, you cannot change its values. Tuples are unchangeable, or immutable as it also is called.
+But there is a workaround. You can convert the tuple into a list, change the list, and convert the list back into a tuple.
+________________________________________________________________________________________________________________________
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+  print(x)
+_____________________________________________________________________________
+thistuple = ("apple", "banana", "cherry")
+if "apple" in thistuple:
+  print("Yes, 'apple' is in the fruits tuple")
+__________________________________________________________
+thistuple = ("apple",)
+print(type(thistuple))
+
+#NOT a tuple
+thistuple = ("apple")
+print(type(thistuple))
+________________________________________________________
+Note: You cannot remove items in a tuple.
+Tuples are unchangeable, so you cannot remove items from it, but you can delete the tuple completely:
+thistuple = ("apple", "banana", "cherry")
+del thistuple
+print(thistuple) #this will raise an error because the tuple no longer exists
+_______________________________________________________________________
+A tuple can also be created without using parentheses. This is known as tuple packing.
+print(my_tuple)   # Output: 3, 4.6, "dog" 
+print(type(my_tuple))
+# tuple unpacking is also possible
+a, b, c = my_tuple
+
+print(a)      # 3
+print(b)      # 4.6 
+print(c)      # dog 
+_____________________________________________________________________________________
